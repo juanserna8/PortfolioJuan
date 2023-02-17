@@ -14,6 +14,7 @@ import Cta from '../partials/Cta';
 import Footer from '../partials/Footer';
 import AboutJuan from '../partials/AboutJuan';
 import SkillSet from '../partials/Skillset';
+import Contact from '../partials/Contact';
 
 function Home() {
   return (
@@ -35,6 +36,7 @@ function Home() {
         <Stats />
         <AboutJuan />
         <SkillSet />
+        <Contact />
         <Tabs />
         <Process />
         <PricingTables />
