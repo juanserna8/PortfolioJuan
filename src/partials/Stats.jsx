@@ -11,23 +11,23 @@ function Stats() {
           <div className="grid grid-cols-2 gap-4 lg:gap-6 md:grid-cols-4 text-center" data-aos-id-stats>
             {/* 1st item */}
             <div className="bg-white dark:bg-gray-800 py-8 px-1 shadow-2xl" data-aos="fade-down" data-aos-anchor="[data-aos-id-stats]">
-              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">2.4M</div>
-              <div className="text-gray-600 dark:text-gray-400">Days turn around</div>
+              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">50%</div>
+              <div className="text-gray-600 dark:text-gray-400">Coding</div>
             </div>
             {/* 2nd item */}
             <div className="bg-white dark:bg-gray-800 py-8 px-1 shadow-2xl" data-aos="fade-down" data-aos-anchor="[data-aos-id-stats]" data-aos-delay="100">
-              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">7M</div>
-              <div className="text-gray-600 dark:text-gray-400">Days turn around</div>
+              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">20%</div>
+              <div className="text-gray-600 dark:text-gray-400">Working out</div>
             </div>
             {/* 3rd item */}
             <div className="bg-white dark:bg-gray-800 py-8 px-1 shadow-2xl" data-aos="fade-down" data-aos-anchor="[data-aos-id-stats]" data-aos-delay="200">
-              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">7.4%</div>
-              <div className="text-gray-600 dark:text-gray-400">Days turn around</div>
+              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">15%</div>
+              <div className="text-gray-600 dark:text-gray-400">Personal development</div>
             </div>
             {/* 4th item */}
             <div className="bg-white dark:bg-gray-800 py-8 px-1 shadow-2xl" data-aos="fade-down" data-aos-anchor="[data-aos-id-stats]" data-aos-delay="300">
-              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">49K</div>
-              <div className="text-gray-600 dark:text-gray-400">Days turn around</div>
+              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">15%</div>
+              <div className="text-gray-600 dark:text-gray-400">Social life</div>
             </div>
           </div>
         </div>

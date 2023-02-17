@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from '../partials/Header';
 import PageIllustration from '../partials/PageIllustration';
-import HeroHome from '../partials/HeroHome';
+import Introduction from '../partials/Introduction';
 import Stats from '../partials/Stats';
 import Carousel from '../partials/Carousel';
 import Tabs from '../partials/Tabs';
@@ -12,6 +12,8 @@ import TestimonialsBlocks from '../partials/TestimonialsBlocks';
 import FeaturesBlocks from '../partials/FeaturesBlocks';
 import Cta from '../partials/Cta';
 import Footer from '../partials/Footer';
+import AboutJuan from '../partials/AboutJuan';
+import SkillSet from '../partials/Skillset';
 
 function Home() {
   return (
@@ -29,9 +31,10 @@ function Home() {
         </div>
 
         {/*  Page sections */}
-        <HeroHome />
+        <Introduction />
         <Stats />
-        <Carousel />
+        <AboutJuan />
+        <SkillSet />
         <Tabs />
         <Process />
         <PricingTables />
