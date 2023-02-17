@@ -70,6 +70,12 @@ module.exports = {
           800: '#97266D',
           900: '#702459',
         },
+        smoke: {
+          100: '#4E301D',
+        },
+        aquamarine: {
+          100: '#bbed2f',
+        }
       },
       outline: {
         blue: '2px solid rgba(0, 112, 244, 0.5)',
@@ -83,6 +89,9 @@ module.exports = {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         'red-hat-display': ['"Red Hat Display"', 'sans-serif'],
+        encode: ['Encode Sans Semi Expanded', 'sans-serif'],
+        open: ['Open Sans', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1.5' }],
