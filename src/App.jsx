@@ -17,6 +17,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Help from './pages/Help';
 import PageNotFound from './pages/PageNotFound';
+import Projects from './pages/Projects';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog-post" element={<BlogPost />} />
