@@ -2,8 +2,6 @@ import React from 'react';
 
 import Header from '../partials/Header';
 import HeroBlog from '../partials/HeroBlog';
-import FeaturedPosts from '../partials/FeaturedPosts';
-import BlogList from '../partials/BlogList';
 import Footer from '../partials/Footer';
 
 function Blog() {
@@ -18,8 +16,6 @@ function Blog() {
 
         {/*  Page sections */}
         <HeroBlog />
-        <FeaturedPosts />
-        <BlogList />
 
       </main>
 

@@ -3,10 +3,7 @@ import React from 'react';
 import Header from '../partials/Header';
 import ProjectsIntro from '../partials/ProjectsIntro';
 import ProjectsInfo from '../partials/ProjectsInfo'
-// import FeaturedPosts from '../partials/FeaturedPosts';
-import BlogList from '../partials/BlogList';
 import Footer from '../partials/Footer';
-import Carousel from '../partials/Carousel';
 
 function Projects() {
   return (
@@ -21,10 +18,6 @@ function Projects() {
         {/*  Page sections */}
         <ProjectsIntro />
         <ProjectsInfo />
-        <Carousel />
-        {/* <FeaturedPosts /> */}
-        <BlogList />
-
       </main>
 
       {/*  Site footer */}
