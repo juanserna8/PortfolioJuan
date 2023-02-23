@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HeroBg from '../images/hero-bg.jpg';
+import ProjectsBG from '../images/projectsbg.webp';
 
 function ProjectsIntro() {
   return (
@@ -8,7 +8,7 @@ function ProjectsIntro() {
 
       {/* Background image */}
       <div className="absolute inset-0 h-128 pt-16 box-content -z-1">
-        <img className="absolute inset-0 w-full h-full object-cover opacity-25" src={HeroBg} width="1440" height="577" alt="About" />
+        <img className="absolute inset-0 w-full h-full object-cover opacity-25" src={ProjectsBG} width="1440" height="577" alt="About" />
         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
       </div>
 

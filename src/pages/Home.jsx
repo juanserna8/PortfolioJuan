@@ -4,7 +4,7 @@ import Header from '../partials/Header';
 import PageIllustration from '../partials/PageIllustration';
 import Introduction from '../partials/Introduction';
 import Stats from '../partials/Stats';
-import Carousel from '../partials/Carousel';
+
 import Tabs from '../partials/Tabs';
 import Process from '../partials/Process';
 import PricingTables from '../partials/PricingTables';
