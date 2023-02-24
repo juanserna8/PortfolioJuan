@@ -22,21 +22,21 @@ const InfoCurrentSection = (project) => {
                     style={{ backgroundImage: `url(${project.project.info[currentSection].image})`}}
                 >
                     <div 
-                        className='basis-[10%] bg-gray-900/50 grid items-center'
+                        className='basis-[10%] bg-gray-900/50 md:bg-white/10 md:dark:bg-gray-900/50 grid items-center'
                         onClick={() => {
                             currentSection > 0 && setCurrentSection(currentSection - 1) 
                         }}
                     >
-                        <svg className="h-10 w-10 text-white mx-auto"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
+                        <svg className="h-10 w-10 text-white md:text-black md:dark:text-white mx-auto"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
                     </div>
                     <div className='basis-[80%]'></div>
                     <div 
-                        className='basis-[10%] bg-gray-900/50 grid items-center'
+                        className='basis-[10%] bg-gray-900/50 md:bg-white/10 md:dark:bg-gray-900/50 grid items-center'
                         onClick={() => {
                             currentSection < project.project.info.length - 1 && handleNext();
                         }}
                     >
-                        <svg className="h-10 w-10 text-white mx-auto"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 6 15 12 9 18" /></svg>
+                        <svg className="h-10 w-10 text-white md:text-black md:dark:text-white mx-auto"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 6 15 12 9 18" /></svg>
                     </div>
                 </div>
             </div>

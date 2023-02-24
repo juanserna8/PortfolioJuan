@@ -12,12 +12,6 @@ import './css/style.scss';
 import AOS from 'aos';
 
 import Home from './pages/Home';
-import Testimonials from './pages/Testimonials';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Help from './pages/Help';
 import PageNotFound from './pages/PageNotFound';
 import Projects from './pages/Projects';
 
@@ -45,12 +39,6 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog-post" element={<BlogPost />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/help" element={<Help />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
