@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Select from '../images/select.webp';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
     const [request, setRequest] = useState({
@@ -23,6 +24,8 @@ const Contact = () => {
     }
 
     console.log(request)
+
+    const [rotate, setRotate] = useState(false)
     
     return ( 
         <section className="border-t border-transparent dark:border-gray-800">
@@ -32,9 +35,16 @@ const Contact = () => {
 
                     <div className="grid grid-cols-12 mt-6 gap-2">
 
-                        <div className="col-span-5">
+                        <motion.div 
+                            animate={{ rotate: rotate ? 360 : 0 }}
+                            transition={{ duration: 1.5 }}
+                            onClick={() => {
+                                setRotate(!rotate);
+                            }}
+                            className="col-span-5"
+                        >
                             <img src={Select} alt="Juan's photo" />
-                        </div>
+                        </motion.div>
 
                         {/* Contact details container */}
                         <div className='col-span-7 grid grid-cols-5 md:content-start md:gap-0'>

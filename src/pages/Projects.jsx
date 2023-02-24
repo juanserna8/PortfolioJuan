@@ -1,13 +1,20 @@
 import React from 'react';
 
+import { motion } from 'framer-motion';
+
 import Header from '../partials/Header';
 import ProjectsIntro from '../partials/ProjectsIntro';
 import ProjectsInfo from '../partials/ProjectsInfo'
 import Footer from '../partials/Footer';
 
+
 function Projects() {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden">
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1.8 }}
+    className="flex flex-col min-h-screen overflow-hidden">
 
       {/*  Site header */}
       <Header />
@@ -23,7 +30,7 @@ function Projects() {
       {/*  Site footer */}
       <Footer />
 
-    </div>
+    </motion.div>
   );
 }
 
