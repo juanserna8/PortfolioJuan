@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import { motion } from 'framer-motion';
+
 import JuanAbout from '../images/Juan-about.svg';
 import About1 from '../images/About10.jpg';
 import About2 from '../images/About2.jpg';
@@ -39,7 +41,7 @@ function AboutJuan() {
           {/* First column */}
           <div className='col-span-1 flex flex-col mx-auto items-start'>
             <h1 className='h1 lg:text-3xl mb-4 text-center mx-auto items-center'>About me</h1>
-            <img src={JuanAbout} alt="Juan's pic" className='mt-4' />
+            <motion.img style={{cursor: "grab",}} drag dragConstraints={{ left: 10, right: 50, bottom: 10, top: 2 }} src={JuanAbout} alt="Juan's pic" className='mt-4' />
           </div>
           {/* Second column */}
           <div className='md:pt-[6rem] md:pl-4 md:pr-8 grid text-justify'>

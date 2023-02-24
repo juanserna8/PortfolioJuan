@@ -5,6 +5,8 @@ import {
   useLocation
 } from 'react-router-dom';
 
+import { motion } from 'framer-motion';
+
 import './css/style.scss';
 
 import AOS from 'aos';
