@@ -41,7 +41,7 @@ const Contact = () => {
                             onClick={() => {
                                 setRotate(!rotate);
                             }}
-                            className="col-span-5"
+                            className="col-span-5 cursor-pointer"
                         >
                             <img src={Select} alt="Juan's photo" />
                         </motion.div>

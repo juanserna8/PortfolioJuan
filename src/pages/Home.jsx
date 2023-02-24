@@ -5,12 +5,6 @@ import PageIllustration from '../partials/PageIllustration';
 import Introduction from '../partials/Introduction';
 import Stats from '../partials/Stats';
 
-import Tabs from '../partials/Tabs';
-import Process from '../partials/Process';
-import PricingTables from '../partials/PricingTables';
-import TestimonialsBlocks from '../partials/TestimonialsBlocks';
-import FeaturesBlocks from '../partials/FeaturesBlocks';
-import Cta from '../partials/Cta';
 import Footer from '../partials/Footer';
 import AboutJuan from '../partials/AboutJuan';
 import SkillSet from '../partials/Skillset';
@@ -37,12 +31,6 @@ function Home() {
         <AboutJuan />
         <SkillSet />
         <Contact />
-        <Tabs />
-        <Process />
-        <PricingTables />
-        <TestimonialsBlocks />
-        <FeaturesBlocks />
-        <Cta />
 
       </main>
 

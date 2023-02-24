@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../utils/Modal';
 
-import MockupImage from '../images/mockup-image-01.jpg';
 import IphoneMockup from '../images/iphone-mockup.png';
 import PlayBtn from '../images/play-button.svg';
 import JuanPhone from "../images/Juan-phone.svg"
