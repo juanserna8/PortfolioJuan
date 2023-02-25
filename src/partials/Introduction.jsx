@@ -6,8 +6,6 @@ import PlayBtn from '../images/play-button.svg';
 import JuanPhone from "../images/Juan-phone.svg"
 import Resume from "../assets/resume.pdf"
 
-import "../images/the-ever-home1.webp";
-
 
 function Introduction() {
 
