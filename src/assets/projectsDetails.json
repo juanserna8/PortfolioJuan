@@ -8,7 +8,7 @@
             [
                 {
                     "title": "Project Description",
-                    "image": "../src/images/the-ever-home1.webp",
+                    "image": "./images/the-ever-home1.webp",
                     "description": "Full stack web application built with React JS, Tailwind CSS, Redux Toolkit and Node JS. Integration with Stripe (payment gateway), and back-end processes are made using AWS services (Lambda functions, AWS SES, Dynamo DB)."
                 },
                 {
