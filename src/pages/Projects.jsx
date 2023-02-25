@@ -11,10 +11,11 @@ import Footer from '../partials/Footer';
 function Projects() {
   return (
     <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 1.8 }}
-    className="flex flex-col min-h-screen overflow-hidden">
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.8 }}
+      className="flex flex-col min-h-screen overflow-hidden"
+    >
 
       {/*  Site header */}
       <Header />

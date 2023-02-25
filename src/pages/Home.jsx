@@ -1,10 +1,11 @@
 import React from 'react';
 
+import { motion } from 'framer-motion';
+
 import Header from '../partials/Header';
 import PageIllustration from '../partials/PageIllustration';
 import Introduction from '../partials/Introduction';
 import Stats from '../partials/Stats';
-
 import Footer from '../partials/Footer';
 import AboutJuan from '../partials/AboutJuan';
 import SkillSet from '../partials/Skillset';
@@ -12,7 +13,12 @@ import Contact from '../partials/Contact';
 
 function Home() {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.8 }}
+      className="flex flex-col min-h-screen overflow-hidden"
+    >
 
       {/*  Site header */}
       <Header />
@@ -37,7 +43,7 @@ function Home() {
       {/*  Site footer */}
       <Footer />
 
-    </div>
+    </motion.div>
   );
 }
 
