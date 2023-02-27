@@ -36,11 +36,10 @@ const Contact = () => {
                 },
             });
             if(res.status == 200) {
-                navigate("/projects");
-                
-                // toast("Success, your message has been sent", {
-                //     type: 'success'
-                // });
+                // navigate("/projects");
+                toast("Success, your message has been sent", {
+                    type: 'success'
+                });
             } else {
                 toast("Alert, your message couldn't be sent. Please try again", {
                     type: 'error'

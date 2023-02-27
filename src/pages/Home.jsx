@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { motion } from 'framer-motion';
+import { ToastContainer } from 'react-toastify';
 
 import Header from '../partials/Header';
 import PageIllustration from '../partials/PageIllustration';
@@ -20,6 +21,7 @@ function Home() {
       className="flex flex-col min-h-screen overflow-hidden"
     >
 
+      <ToastContainer />
       {/*  Site header */}
       <Header />
 
