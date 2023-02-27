@@ -50,7 +50,7 @@ function AboutJuan() {
             <p className='pt-2'>As a developer, I value collaboration and teamwork, and I am always striving to learn and grow. I am comfortable working in agile environments and have experience in adapting to changing requirements and tight timelines.</p>
 
             {/* Images */}
-            <div className='grid grid-cols-2 sm:grid-cols-3 gap-4 px-4 lg:pl-4 mt-4'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:hidden lg:grid gap-4 px-4 lg:pl-4 mt-4'>
               <img src={About1} alt="photo-working-out" className='object-fill h-[10rem] aspect-square mx-auto rounded border border-gray-400' />
               <img src={About2} alt="photo-travelling" className='object-fill h-[10rem] aspect-square mx-auto rounded border border-gray-400' />
               <img src={About3} alt="photo-eating-out" className='col-span-2 sm:col-span-1 mx-auto object-scale h-[10rem] aspect-square rounded border border-gray-400' />

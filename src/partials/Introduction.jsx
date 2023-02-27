@@ -20,7 +20,7 @@ function Introduction() {
           <div className="md:grid md:grid-cols-12 md:gap-12 lg:gap-20 items-center">
 
             {/* Content */}
-            <div className="md:col-span-7 lg:col-span-7 mb-8 md:mb-0 text-center md:text-left">
+            <div className="md:col-span-6 lg:col-span-7 mb-8 md:mb-0 text-center md:text-left">
               <h1 className="h1 lg:text-6xl mb-4 font-open" data-aos="fade-down">Hey there, I'm Juan Serna</h1>
               <p className="text-3xl text-gray-600 font-poppins dark:text-white" data-aos="fade-down" data-aos-delay="150">Front-end Developer</p>
               <a className="mt-8 btn text-white text-xl bg-teal-500 hover:bg-orange-700 shrink-0" href={Resume} download>
