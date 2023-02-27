@@ -11,6 +11,14 @@ import './css/style.scss';
 
 import AOS from 'aos';
 
+import { Amplify } from 'aws-amplify';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+
+import awsExports from './aws-exports';
+Amplify.configure(awsExports);
+
+
 import Home from './pages/Home';
 import PageNotFound from './pages/PageNotFound';
 import Projects from './pages/Projects';

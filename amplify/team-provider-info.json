@@ -10,6 +10,17 @@
       "StackName": "amplify-portfoliojuan-dev-140316",
       "StackId": "arn:aws:cloudformation:ap-southeast-2:476031719927:stack/amplify-portfoliojuan-dev-140316/c99193b0-b3ef-11ed-abdb-0228e1600a64",
       "AmplifyAppId": "d2yhojb6vu8jmu"
+    },
+    "categories": {
+      "function": {
+        "handleQuotes": {
+          "deploymentBucketName": "amplify-portfoliojuan-dev-140316-deployment",
+          "s3Key": "amplify-builds/handleQuotes-7466596b66724d42584c-build.zip"
+        }
+      },
+      "api": {
+        "quotes": {}
+      }
     }
   }
 }

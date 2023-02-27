@@ -41,7 +41,7 @@ function AboutJuan() {
           {/* First column */}
           <div className='col-span-1 flex flex-col mx-auto items-start'>
             <h1 className='h1 lg:text-3xl mb-4 text-center mx-auto items-center'>About me</h1>
-            <motion.img style={{cursor: "grab",}} drag dragConstraints={{ left: 10, right: 50, bottom: 10, top: 2 }} src={JuanAbout} alt="Juan's pic" className='mt-4' />
+            <motion.img style={{cursor: "grab",}} drag dragConstraints={{ left: 10, right: 50, bottom: 10, top: 2 }} src={JuanAbout} alt="Juan's pic" className='mx-auto mt-4 lg:mt-12 h-[16rem] md:h-auto' />
           </div>
           {/* Second column */}
           <div className='md:pt-[6rem] md:pl-4 md:pr-8 grid text-justify'>
@@ -50,7 +50,7 @@ function AboutJuan() {
             <p className='pt-2'>As a developer, I value collaboration and teamwork, and I am always striving to learn and grow. I am comfortable working in agile environments and have experience in adapting to changing requirements and tight timelines.</p>
 
             {/* Images */}
-            <div className='grid grid-cols-2 sm:grid-cols-3 gap-4 px-4 lg:pl-4 mt-4'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:hidden lg:grid gap-4 px-4 lg:pl-4 mt-4'>
               <img src={About1} alt="photo-working-out" className='object-fill h-[10rem] aspect-square mx-auto rounded border border-gray-400' />
               <img src={About2} alt="photo-travelling" className='object-fill h-[10rem] aspect-square mx-auto rounded border border-gray-400' />
               <img src={About3} alt="photo-eating-out" className='col-span-2 sm:col-span-1 mx-auto object-scale h-[10rem] aspect-square rounded border border-gray-400' />

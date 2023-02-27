@@ -72,15 +72,13 @@ function Header() {
             {/* Desktop menu links */}
             <ul className="flex grow flex-wrap justify-end items-center font-medium mr-4 font-encode">
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-gray-900 dark:hover:text-gray-300 text-lg hover:scale-110 px-5 py-2 flex items-center transition duration-150 ease-in-out">About</Link>
+                <Link to="/" className="text-gray-600 hover:text-gray-900 dark:hover:text-gray-300 text-lg hover:scale-110 px-5 py-2 flex items-center transition duration-150 ease-in-out">About</Link>
               </li>
               <li>
                 <Link to="/projects" className="text-gray-600 hover:text-gray-900 dark:hover:text-gray-300 text-lg hover:scale-110 px-5 py-2 flex items-center transition duration-150 ease-in-out">Projects</Link>
               </li>
-              <li>
-                <Link to="/testimonials" className="text-gray-600 hover:text-gray-900 dark:hover:text-gray-300 text-lg hover:scale-110 px-5 py-2 flex items-center transition duration-150 ease-in-out">Contact</Link>
-              </li>
-              <li>
+              
+              <li className='ml-4'>
                 <a href="https://www.linkedin.com/in/jdserna/" target="_blank">
                   <svg className="h-7 w-7 p-1 text-white font-bold bg-black rounded ml-3 hover:scale-110 transition duration-150 ease-in-out"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />  <rect x="2" y="9" width="4" height="12" />  <circle cx="4" cy="4" r="2" /></svg>
                 </a>
@@ -167,13 +165,10 @@ function Header() {
                   <ul className='mt-8 border-t h-screen'>
                     
                     <li>
-                      <Link to="/about" className="mt-4 flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">About</Link>
+                      <Link to="/" className="mt-4 flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">About</Link>
                     </li>
                     <li>
                       <Link to="/projects" className="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">Projects</Link>
-                    </li>
-                    <li>
-                      <Link to="/testimonials" className="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">Contact</Link>
                     </li>
                     
                     <li className="absolute bottom-4 ">
