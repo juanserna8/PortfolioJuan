@@ -50,11 +50,11 @@ const Contact = () => {
                         <div className='col-span-7 grid grid-cols-5 md:content-start md:gap-0'>
                             <div className='col-span-5 md:col-span-3 md:mx-auto pt-4 md:pt-0'>
                                 <p className='text-xl text-gray-600 font-poppins dark:text-white'>Email:</p>
-                                <p className='text-sm md:text-lg text-gray-600 dark:text-gray-400'>sernadominguezj@gmail.com</p>
+                                <a href="mailto:sernadominguezj@gmail.com"><p className='text-sm md:text-lg text-gray-600 dark:text-gray-400'>sernadominguezj@gmail.com</p></a>
                             </div>
                             <div className='col-span-5 md:col-span-2 md:mx-auto md:mt-0'>
                                 <p className='text-xl text-gray-600 font-poppins dark:text-white'>Mobile:</p>
-                                <p className='text-sm md:text-lg text-gray-600 dark:text-gray-400'>0414029043</p>
+                                <a href="tel:+61414029043"><p className='text-sm md:text-lg text-gray-600 dark:text-gray-400'>0414029043</p></a>
                             </div>
                         
 
