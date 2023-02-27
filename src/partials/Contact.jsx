@@ -1,6 +1,13 @@
 import { useState } from 'react';
-import Select from '../images/select.webp';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { API } from 'aws-amplify';
+
+import Select from '../images/select.webp';
 
 const Contact = () => {
     const [request, setRequest] = useState({
@@ -10,20 +17,42 @@ const Contact = () => {
         message: "",
     });
 
+    const navigate = useNavigate();
+    
     const handleChange = (e) => {
         setRequest(prev=>({...prev, [e.target.name]: e.target.value}))
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('Your message has been sent');
         try{
-            console.log('Success!!');
+            let res = await API.post('quotes', '/create', {
+                body: {
+                    name: request.name,
+                    phone: request.phone,
+                    email: request.email,
+                    message: request.message
+                },
+            });
+            if(res.status == 200) {
+                navigate("/projects");
+                
+                // toast("Success, your message has been sent", {
+                //     type: 'success'
+                // });
+            } else {
+                toast("Alert, your message couldn't be sent. Please try again", {
+                    type: 'error'
+                })
+            }
         } catch(err) {
             console.log(err);
+            toast("Alert, your message couldn't be sent. Please try again", {
+                type: 'error'
+            })
         }
     }
-
-    console.log(request)
 
     const [rotate, setRotate] = useState(false)
     

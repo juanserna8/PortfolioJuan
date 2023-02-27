@@ -8,7 +8,7 @@ function Footer() {
 <footer className="relative">
     <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py12 border-t border-gray-200 dark:border-gray-800 -mt-px font-poppins">
-            <div className='text-xs flex justify-end'>
+            <div className='text-xs flex justify-center md:justify-end'>
                 <p>Copyright &copy; 2023 <span>Juan Serna</span> All Rights Reserved</p>
             </div>
         </div>
