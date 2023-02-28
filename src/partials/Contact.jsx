@@ -17,40 +17,58 @@ const Contact = () => {
         message: "",
     });
 
-    const navigate = useNavigate();
+    const [renderForm, setRenderForm] = useState(true);
+    const [buttonSubmitted, setButtonSubmitted] = useState(false);
+    // const navigate = useNavigate();
     
     const handleChange = (e) => {
         setRequest(prev=>({...prev, [e.target.name]: e.target.value}))
     }
 
-    const [renderForm, setRenderForm] = useState(true);
+    // Declare the initial state of an email
+    const [validEmail, setValidEmail] = useState(false);
 
+    // This is the way that an email should be written
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Verify that the email is genuine
+    function isValidEmail() {
+        setValidEmail(!validEmail);
+        return emailRegex.test(request.email);
+      }
+
+    // Post the form information to the API
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Your message has been sent');
-        try{
-            let res = await API.post('quotes', '/create', {
-                body: {
-                    name: request.name,
-                    phone: request.phone,
-                    email: request.email,
-                    message: request.message
-                },
-            });
-            if(res.status == 200) {
-                // navigate("/projects");
-                toast("Success, your message has been sent", {
-                    type: 'success'
+        if(isValidEmail()) {
+            try{
+                let res = await API.post('quotes', '/create', {
+                    body: {
+                        name: request.name,
+                        phone: request.phone,
+                        email: request.email,
+                        message: request.message
+                    },
                 });
-                setRenderForm(!renderForm);
-            } else {
+                if(res.status == 200) {
+                    toast("Success, your message has been sent", {
+                        type: 'success'
+                    });
+                    setRenderForm(!renderForm);
+                } else {
+                    toast("Alert, your message couldn't be sent. Please try again", {
+                        type: 'error'
+                    })
+                }
+            } catch(err) {
+                console.log(err);
                 toast("Alert, your message couldn't be sent. Please try again", {
                     type: 'error'
                 })
             }
-        } catch(err) {
-            console.log(err);
-            toast("Alert, your message couldn't be sent. Please try again", {
+        } else {
+            console.log('enter a valid email address');
+            toast("Please provide a valid email address", {
                 type: 'error'
             })
         }
@@ -135,7 +153,6 @@ const Contact = () => {
                                 </div>
                             )}
                             
-
                         </div>
                         
                     </div>
@@ -159,10 +176,10 @@ const Contact = () => {
                                 <svg className="h-6 w-6 text-white"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="7 7 12 12 17 7" />  <polyline points="7 13 12 18 17 13" /></svg>
                             </div>
                             <form onSubmit={handleSubmit} className='mt-4 pl-2 w-full md:hidden'>
-                                <input type="text" onChange={handleChange} name="name" placeholder='Name' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
-                                <input type="text" onChange={handleChange} name="phone" placeholder='Phone' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
-                                <input type="text" onChange={handleChange} name="email" placeholder='Email' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
-                                <input type="text" onChange={handleChange} name="message" placeholder='Message' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
+                                <input type="text" onChange={handleChange} name="name" placeholder='Name' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                <input type="number" onChange={handleChange} name="phone" placeholder='Phone' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                <input type="email" onChange={handleChange} name="email" placeholder='Email' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                <input type="text" onChange={handleChange} name="message" placeholder='Message' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
                                 <div className='w-full flex justify-center'>
                                     <button className='mt-4 btn text-white text-lg bg-teal-500 hover:bg-orange-700 shrink-0'>
                                         <span>Send message</span>
