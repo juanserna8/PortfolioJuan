@@ -18,29 +18,45 @@ const Contact = () => {
     });
 
     const [renderForm, setRenderForm] = useState(true);
-    const [buttonSubmitted, setButtonSubmitted] = useState(false);
-    // const navigate = useNavigate();
-    
+        
     const handleChange = (e) => {
         setRequest(prev=>({...prev, [e.target.name]: e.target.value}))
     }
 
-    // Declare the initial state of an email
-    const [validEmail, setValidEmail] = useState(false);
+    // Declare the initial state of a valid email
+    // const [validEmail, setValidEmail] = useState(false);
 
     // This is the way that an email should be written
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Verify that the email is genuine
-    function isValidEmail() {
-        setValidEmail(!validEmail);
-        return emailRegex.test(request.email);
-      }
+    // function isValidEmail() {
+    //     setValidEmail(!validEmail);
+    //     return emailRegex.test(request.email);
+    //   }
+
+    //   Declare initial state of a valid phone
+    // const [validPhone, setValidPhone] = useState();
+    // These are the parameters a phone number must comply with
+    // const phoneRegex = /^\d{10}$/;
+    // Verify that the phone is genuine
+    // function isValidPhone() {
+    //     return phoneRegex.test(request.phone);
+    //   }
+
+    const [invalidField, setInvalidField] = useState(null);
 
     // Post the form information to the API
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if(isValidEmail()) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^\d{10}$/;
+        if(!emailRegex.test(request.email)) {
+            setInvalidField('email')
+        } else if (!phoneRegex.test(request.phone)) {
+            setInvalidField('phone')
+        } else {
+            setInvalidField(null);
             try{
                 let res = await API.post('quotes', '/create', {
                     body: {
@@ -66,15 +82,13 @@ const Contact = () => {
                     type: 'error'
                 })
             }
-        } else {
-            console.log('enter a valid email address');
-            toast("Please provide a valid email address", {
-                type: 'error'
-            })
         }
+        
     }
 
     const [rotate, setRotate] = useState(false)
+
+    console.log(invalidField)
     
     return ( 
         <section className="border-t border-transparent dark:border-gray-800">
@@ -130,7 +144,17 @@ const Contact = () => {
                                         <div className='flex flex-col'>
                                             <input type="text" onChange={handleChange} name="name" placeholder='Name' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
                                             <input type="number" onChange={handleChange} name="phone" placeholder='Phone' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                            {invalidField === 'phone' && (
+                                                <div className='-mt-2 mb-2'>
+                                                    <p className='text-xs text-red-300'>Please provide a valid phone number</p>
+                                                </div>
+                                            )}
                                             <input type="email" onChange={handleChange} name="email" placeholder='Email' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                            {invalidField === 'email' && (
+                                                <div className='-mt-2 mb-2'>
+                                                    <p className='text-xs text-red-300'>Please provide a valid email address</p>
+                                                </div>
+                                            )}
                                             <input type="text" onChange={handleChange} name="message" placeholder='Message' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
                                             <button className='mt-4 text-white rounded text-sm text-center w-full bg-teal-500 hover:bg-orange-700 shrink-0 px-2 h-10'>
                                                 <span>Send message</span>
@@ -178,7 +202,17 @@ const Contact = () => {
                             <form onSubmit={handleSubmit} className='mt-4 pl-2 w-full md:hidden'>
                                 <input type="text" onChange={handleChange} name="name" placeholder='Name' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
                                 <input type="number" onChange={handleChange} name="phone" placeholder='Phone' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                {invalidField === 'phone' && (
+                                    <div className='-mt-2 mb-2'>
+                                        <p className='text-xs text-red-300'>Please provide a valid phone number</p>
+                                    </div>
+                                )}
                                 <input type="email" onChange={handleChange} name="email" placeholder='Email' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                {invalidField === 'email' && (
+                                    <div className='-mt-2 mb-2'>
+                                        <p className='text-xs text-red-300'>Please provide a valid email address</p>
+                                    </div>
+                                )}
                                 <input type="text" onChange={handleChange} name="message" placeholder='Message' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
                                 <div className='w-full flex justify-center'>
                                     <button className='mt-4 btn text-white text-lg bg-teal-500 hover:bg-orange-700 shrink-0'>
