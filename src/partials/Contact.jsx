@@ -23,27 +23,6 @@ const Contact = () => {
         setRequest(prev=>({...prev, [e.target.name]: e.target.value}))
     }
 
-    // Declare the initial state of a valid email
-    // const [validEmail, setValidEmail] = useState(false);
-
-    // This is the way that an email should be written
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // Verify that the email is genuine
-    // function isValidEmail() {
-    //     setValidEmail(!validEmail);
-    //     return emailRegex.test(request.email);
-    //   }
-
-    //   Declare initial state of a valid phone
-    // const [validPhone, setValidPhone] = useState();
-    // These are the parameters a phone number must comply with
-    // const phoneRegex = /^\d{10}$/;
-    // Verify that the phone is genuine
-    // function isValidPhone() {
-    //     return phoneRegex.test(request.phone);
-    //   }
-
     const [invalidField, setInvalidField] = useState(null);
 
     // Post the form information to the API
