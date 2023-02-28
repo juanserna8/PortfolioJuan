@@ -20,6 +20,9 @@ export default defineConfig({
           return val.replace(/^~/, "");
         },
       },
+      {
+        find: './runtimeConfig', replacement: './runtimeConfig.browser',
+      }
     ],
   },
   build: {
