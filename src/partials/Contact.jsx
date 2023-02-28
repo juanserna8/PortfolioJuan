@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import { toast } from 'react-toastify';
@@ -23,6 +23,8 @@ const Contact = () => {
         setRequest(prev=>({...prev, [e.target.name]: e.target.value}))
     }
 
+    const [renderForm, setRenderForm] = useState(true);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log('Your message has been sent');
@@ -40,6 +42,7 @@ const Contact = () => {
                 toast("Success, your message has been sent", {
                     type: 'success'
                 });
+                setRenderForm(!renderForm);
             } else {
                 toast("Alert, your message couldn't be sent. Please try again", {
                     type: 'error'
@@ -97,22 +100,41 @@ const Contact = () => {
                             </div>
 
                             {/* Form in desktop */}
-                            <div className='col-span-5 hidden md:flex items-end mt-10'>
-                                <p className='text-xl text-gray-600 font-poppins dark:text-white'>Call me or leave a message</p>
-                                <svg className="h-6 w-6 text-white"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="7 7 12 12 17 7" />  <polyline points="7 13 12 18 17 13" /></svg>
-                            </div>
+                            {/* If the message has not been sent, render the form */}
+                            {renderForm === true && (
+                                <div className='col-span-5'>
+                                    <div className='col-span-5 hidden md:flex items-end mt-10'>
+                                        <p className='text-xl text-gray-600 font-poppins dark:text-white'>Call me or leave a message</p>
+                                        <svg className="h-6 w-6 text-white"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="7 7 12 12 17 7" />  <polyline points="7 13 12 18 17 13" /></svg>
+                                    </div>
 
-                            <form onSubmit={handleSubmit} className='hidden md:flex items-center mt-4'>
-                                <div className='flex flex-col'>
-                                    <input type="text" onChange={handleChange} name="name" placeholder='Name' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
-                                    <input type="number" onChange={handleChange} name="phone" placeholder='Phone' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
-                                    <input type="email" onChange={handleChange} name="email" placeholder='Email' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
-                                    <input type="text" onChange={handleChange} name="message" placeholder='Message' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
-                                    <button className='mt-4 text-white rounded text-sm text-center w-full bg-teal-500 hover:bg-orange-700 shrink-0 px-2 h-10'>
-                                        <span>Send message</span>
-                                    </button>
+                                    <form onSubmit={handleSubmit} className='hidden md:flex items-center mt-4'>
+                                        <div className='flex flex-col'>
+                                            <input type="text" onChange={handleChange} name="name" placeholder='Name' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                            <input type="number" onChange={handleChange} name="phone" placeholder='Phone' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                            <input type="email" onChange={handleChange} name="email" placeholder='Email' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                            <input type="text" onChange={handleChange} name="message" placeholder='Message' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
+                                            <button className='mt-4 text-white rounded text-sm text-center w-full bg-teal-500 hover:bg-orange-700 shrink-0 px-2 h-10'>
+                                                <span>Send message</span>
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
-                            </form>
+                            )}
+
+                            {/* If the message has been sent, then render a thank you message */}
+                            {renderForm === false && (
+                                <div className='mt-20 col-span-5 hidden md:grid gap-2'>
+                                    <p>Thanks for reaching out! I will be in touch shortly.</p>
+                                    <p>Meanwhile, visit my most recent projects:</p>
+                                    <Link to="/projects" className='mt-4 mx-auto'>
+                                        <button className='btn py-2 px-4 text-white bg-teal-500 hover:bg-orange-700'>
+                                            Projects
+                                        </button>
+                                    </Link>
+                                </div>
+                            )}
+                            
 
                         </div>
                         
@@ -129,21 +151,41 @@ const Contact = () => {
                     </div>
 
                     {/* Form mobile view */}
-                    <div className='flex items-end md:hidden'>
-                        <p className='pl-2 mt-4'>Call me or leave a message</p>
-                        <svg className="h-6 w-6 text-white"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="7 7 12 12 17 7" />  <polyline points="7 13 12 18 17 13" /></svg>
-                    </div>
-                    <form onSubmit={handleSubmit} className='mt-4 pl-2 w-full md:hidden'>
-                        <input type="text" onChange={handleChange} name="name" placeholder='Name' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
-                        <input type="text" onChange={handleChange} name="phone" placeholder='Phone' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
-                        <input type="text" onChange={handleChange} name="email" placeholder='Email' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
-                        <input type="text" onChange={handleChange} name="message" placeholder='Message' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
-                        <div className='w-full flex justify-center'>
-                            <button className='mt-4 btn text-white text-lg bg-teal-500 hover:bg-orange-700 shrink-0'>
-                                <span>Send message</span>
-                            </button>
+                    {/* Render form if it has not been submited */}
+                    {renderForm === true && (
+                        <div>
+                            <div className='flex items-end md:hidden'>
+                                <p className='pl-2 mt-4'>Call me or leave a message</p>
+                                <svg className="h-6 w-6 text-white"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="7 7 12 12 17 7" />  <polyline points="7 13 12 18 17 13" /></svg>
+                            </div>
+                            <form onSubmit={handleSubmit} className='mt-4 pl-2 w-full md:hidden'>
+                                <input type="text" onChange={handleChange} name="name" placeholder='Name' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
+                                <input type="text" onChange={handleChange} name="phone" placeholder='Phone' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
+                                <input type="text" onChange={handleChange} name="email" placeholder='Email' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
+                                <input type="text" onChange={handleChange} name="message" placeholder='Message' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg'/>
+                                <div className='w-full flex justify-center'>
+                                    <button className='mt-4 btn text-white text-lg bg-teal-500 hover:bg-orange-700 shrink-0'>
+                                        <span>Send message</span>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                    )}
+
+                    {/* If the message has been sent, then render a thank you message */}
+                    {renderForm === false && (
+                        <div className='md:hidden px-4'>
+                            <div className='mt-4 col-span-5 grid gap-2 text-sm'>
+                                <p>Thanks for reaching out! I will be in touch shortly.</p>
+                                <p>Meanwhile, visit my most recent projects:</p>
+                                <Link to="/projects" className='mt-4 mx-auto'>
+                                    <button className='btn py-2 px-4 text-white bg-teal-500 hover:bg-orange-700'>
+                                        Projects
+                                    </button>
+                                </Link>
+                            </div>
+                        </div>
+                    )}
 
 
                 </div>
