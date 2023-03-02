@@ -15,7 +15,7 @@
       "function": {
         "handleQuotes": {
           "deploymentBucketName": "amplify-portfoliojuan-dev-140316-deployment",
-          "s3Key": "amplify-builds/handleQuotes-7466596b66724d42584c-build.zip"
+          "s3Key": "amplify-builds/handleQuotes-4a6e6f682b7848574d59-build.zip"
         }
       },
       "api": {
