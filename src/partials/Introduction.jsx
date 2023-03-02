@@ -23,7 +23,7 @@ function Introduction() {
             <div className="md:col-span-6 lg:col-span-7 mb-8 md:mb-0 text-center md:text-left">
               <h1 className="h1 lg:text-6xl mb-4 font-open" data-aos="fade-down">Hey there, I'm Juan Serna</h1>
               <p className="text-3xl text-gray-600 font-poppins dark:text-white" data-aos="fade-down" data-aos-delay="150">Front-end Developer</p>
-              <a className="mt-8 btn text-white text-xl bg-teal-500 hover:bg-orange-700 shrink-0" href={Resume} download>
+              <a className="mt-8 btn text-white text-xl bg-teal-500 hover:bg-orange-700 dark:hover:bg-transparent dark:hover:border dark:hover:border-teal-500 dark:hover:text-teal-500 shrink-0 transition duration-500 dark:duration-800" href={Resume} download>
                 Resume
                 <svg className="h-6 w-6 text-white ml-4"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
