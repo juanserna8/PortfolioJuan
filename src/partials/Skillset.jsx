@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const SkillSet = () => {
     return ( 
         <section className="border-t border-transparent dark:border-gray-800">
@@ -128,6 +130,13 @@ const SkillSet = () => {
               </ul>
             </div>
           </div>
+        </div>
+        <div className="mt-12 font-poppins max-w-3xl mx-auto flex justify-center">
+          <Link to='/projects'>
+            <button className='mt-8 btn text-white text-xl bg-teal-500 hover:bg-orange-700 dark:hover:bg-transparent dark:hover:border dark:hover:border-teal-500 dark:hover:text-teal-500 shrink-0 transition duration-500 dark:duration-800'>
+              See projects
+            </button>
+          </Link>
         </div>
       </div>
     </section>
