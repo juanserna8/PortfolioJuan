@@ -3,9 +3,9 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import JuanAbout from '../images/Juan-about.svg';
-import About1 from '../images/About10.jpg';
-import About2 from '../images/About2.jpg';
-import About3 from '../images/About30.jpg';
+import About1 from '../images/About1.webp';
+import About2 from '../images/About2.webp';
+import About3 from '../images/About3.webp';
 
 
 // Import Swiper
