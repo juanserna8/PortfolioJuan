@@ -124,13 +124,19 @@ module.exports = {
         98: '.98',
       },
       animation: {
-        float: 'float 5s ease-in-out infinite'
+        float: 'float 5s ease-in-out infinite',
+        pulse: "pulse 3s ease-in-out infinite",
+        beat: "beat 3s ease-out infinite",
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10%)' },
         },
+        beat: {
+          '0%, 100%': {transform: 'scale(1)'},
+          '50%': { transform: 'scale(1.1)'},
+        }
       },
       zIndex: {
         '-1': '-1',
