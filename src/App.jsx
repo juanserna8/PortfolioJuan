@@ -20,7 +20,6 @@ Amplify.configure(awsExports);
 
 
 import Home from './pages/Home';
-import PageNotFound from './pages/PageNotFound';
 import Projects from './pages/Projects';
 
 function App() {
@@ -47,7 +46,6 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
   );
