@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import IphoneMockup from '../images/iphone-mockup.png';
-import JuanPhone from "../images/Juan-phone.webp"
+import JuanPhone from "../images/Juan-phone.svg"
 import Resume from "../assets/resume.pdf"
 
 
