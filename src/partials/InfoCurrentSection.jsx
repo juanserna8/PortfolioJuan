@@ -42,7 +42,7 @@ const InfoCurrentSection = (project) => {
             </div>
 
             {/* Right column */}
-            <div className='flex flex-col lg:mt-4 px-2'>
+            <div className='flex flex-col lg:mt-4 px-8 md:px-2'>
                 <p className='text-2xl text-gray-600 font-poppins dark:text-white'>{project.project.info[currentSection].title}</p>
                 <p className='text-xl text-gray-600 dark:text-gray-400 mt-4 text-justify'>{project.project.info[currentSection].description}</p>
             </div>
