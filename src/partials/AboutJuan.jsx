@@ -41,12 +41,12 @@ function AboutJuan() {
           {/* First column */}
           <div className='col-span-1 flex flex-col mx-auto items-start'>
             <h1 className='h1 lg:text-3xl mb-4 text-center mx-auto items-center'>About me</h1>
-            <motion.img style={{cursor: "grab",}} drag dragConstraints={{ left: 10, right: 50, bottom: 10, top: 2 }} src={JuanAbout} alt="Juan's pic" className='mx-auto mt-4 lg:mt-12 h-[16rem] md:h-auto' />
+            <motion.img style={{cursor: "grab",}} drag dragConstraints={{ left: 10, right: 50, bottom: 10, top: 2 }} src={JuanAbout} alt="Juan's pic" className='mx-auto mt-4 lg:mt-12 h-[22rem] md:h-auto' />
           </div>
           {/* Second column */}
           <div className='md:pt-[6rem] md:pl-4 md:pr-8 grid text-justify'>
             <p className=''>I am an easy going Web Developer who enjoys working in team and sharing ideas and solutions with people that sorround me. I'm always looking for ways to improve efficiency and add value to colleagues, groups and organizations.</p>
-            <p className='pt-2'>As a junior web developer with expertise in React JS and AWS, and with a basic knowledge of MySQL and NoSQL databases such as Dynamo DB, I am passionate about building dynamic and responsive web applications. With a strong foundation in front-end development using React JS and serverless technologies using AWS, I am dedicated to creating elegant solutions to complex problems. My experience with AWS has allowed me to deploy web applications on the cloud, and I have had the opportunity to integrate various AWS services to improve the scalability, reliability, and security of my applications.</p>
+            <p className='pt-2'>As a web developer with expertise in React JS and AWS, and with a basic knowledge of MySQL and NoSQL databases such as Dynamo DB, I am passionate about building dynamic and responsive web applications. With a strong foundation in front-end development using React JS and serverless technologies using AWS, I am dedicated to creating elegant solutions to complex problems. My experience with AWS has allowed me to deploy web applications on the cloud, and I have had the opportunity to integrate various AWS services to improve the scalability, reliability, and security of my applications.</p>
             <p className='pt-2'>As a developer, I value collaboration and teamwork, and I am always striving to learn and grow. I am comfortable working in agile environments and have experience in adapting to changing requirements and tight timelines.</p>
 
             {/* Images */}
