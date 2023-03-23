@@ -7,6 +7,12 @@ import Resume from "../assets/resume.pdf"
 
 function Introduction() {
 
+  const [loaded, setLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setLoaded(true);
+  }
+
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -61,7 +67,10 @@ function Introduction() {
                   </defs>
                 </svg>
                 {/* Image inside mockup size: 290x624px (or 580x1248px for Retina devices) */}
-                <img className="absolute" src={JuanPhone} width="290" height="624" style={{ maxWidth: '84.33%' }} alt="Features illustration" />
+                {!loaded && (
+                  <svg className="h-8 w-8 text-white absolute"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="12" y1="2" x2="12" y2="6" />  <line x1="12" y1="18" x2="12" y2="22" />  <line x1="4.93" y1="4.93" x2="7.76" y2="7.76" />  <line x1="16.24" y1="16.24" x2="19.07" y2="19.07" />  <line x1="2" y1="12" x2="6" y2="12" />  <line x1="18" y1="12" x2="22" y2="12" />  <line x1="4.93" y1="19.07" x2="7.76" y2="16.24" />  <line x1="16.24" y1="7.76" x2="19.07" y2="4.93" /></svg>
+                )}
+                <img className="absolute" src={JuanPhone} width="290" height="624" style={{ maxWidth: '84.33%', display: loaded ? 'block' : 'none' }} alt="Features illustration" onLoad={handleImageLoad} />
                 {/* iPhone mockup */}
                 <img className="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src={IphoneMockup} width="344" height="674" alt="iPhone mockup" aria-hidden="true" />
               </div>
