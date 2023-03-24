@@ -2,10 +2,17 @@ import React, { useState } from 'react';
 
 import IphoneMockup from '../images/iphone-mockup.png';
 import JuanPhone from "../images/Juan-phone.svg"
-import Resume from "../assets/resume.pdf"
+import Resume from "../assets/resume.pdf";
+import LoadImage from '../images/loading.png';
 
 
 function Introduction() {
+
+  const [loaded, setLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setLoaded(true);
+  }
 
   return (
     <section>
@@ -61,7 +68,10 @@ function Introduction() {
                   </defs>
                 </svg>
                 {/* Image inside mockup size: 290x624px (or 580x1248px for Retina devices) */}
-                <img className="absolute" src={JuanPhone} width="290" height="624" style={{ maxWidth: '84.33%' }} alt="Features illustration" />
+                {!loaded && (
+                  <img src={LoadImage} alt="loading image" className='absolute animate-spin w-[20rem]' />
+                )}
+                <img className="absolute" src={JuanPhone} width="290" height="624" style={{ maxWidth: '84.33%', display: loaded ? 'block' : 'none' }} alt="Features illustration" onLoad={handleImageLoad} />
                 {/* iPhone mockup */}
                 <img className="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src={IphoneMockup} width="344" height="674" alt="iPhone mockup" aria-hidden="true" />
               </div>

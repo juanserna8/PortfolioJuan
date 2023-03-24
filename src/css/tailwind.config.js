@@ -127,6 +127,7 @@ module.exports = {
         float: 'float 5s ease-in-out infinite',
         pulse: "pulse 3s ease-in-out infinite",
         beat: "beat 3s ease-out infinite",
+        spin: "spin 1s linear infinite"
       },
       keyframes: {
         float: {
