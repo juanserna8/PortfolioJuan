@@ -22,7 +22,7 @@ function ProjectsIntro() {
                 {/* Title and excerpt */}
                 <div className="text-center md:text-left">
                   <h1 className='h1 lg:text-6xl mb-4 font-open text-left'>Projects</h1>
-                  <p className="text-xl text-gray-600 dark:text-gray-400 text-left">Check out some of the most recent projects I have done/collaborated in the past. My experience is based on websites development, digital transformation projects and business consultancy.</p>
+                  <p className="text-xl text-gray-600 dark:text-gray-400 text-left">Check out some of the most recent projects I have done/collaborated in. My experience is based on websites development, digital transformation projects and business consultancy.</p>
                 </div>
               </header>
             </article>
