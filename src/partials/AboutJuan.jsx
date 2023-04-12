@@ -45,9 +45,10 @@ function AboutJuan() {
           </div>
           {/* Second column */}
           <div className='md:pt-[6rem] md:pl-4 md:pr-8 grid text-justify'>
-            <p className=''>I am an easy going team member who enjoys working in team and sharing ideas and solutions with people that sorround me. I'm always looking for ways to improve efficiency and add value to colleagues, groups and organizations.</p>
-            <p className='pt-2'>As a web developer with expertise in React JS, AWS, and project management/business consultancy skills, I am passionate about building dynamic and responsive IT-related projects. With a strong foundation in front-end development using React JS and serverless technologies using AWS, I am dedicated to creating elegant solutions to complex IT challenges. My experience with AWS has allowed me to deploy applications on the cloud and integrate various AWS services to improve scalability, reliability, and security. Additionally, my project management and business consultancy skills enable me to effectively plan, execute, and deliver successful projects.</p>
-            <p className='pt-2'>Let's work together to create innovative solutions that drive results in the IT industry!.</p>
+            <p className=''>I'm a team player who loves working with others and sharing ideas to come up with creative solutions. I'm always looking for ways to make things better and add value to my colleagues, groups, and organizations.</p>
+            <p className='pt-2'>As a web developer with expertise in React JS, AWS, and project management/business consultancy skills, I'm passionate about building dynamic and responsive IT-related projects. I enjoy creating elegant solutions to complex IT challenges using React JS and AWS serverless technologies. I've also gained experience in deploying applications on the cloud and integrating various AWS services to make them more scalable, reliable, and secure.</p>
+            <p className='pt-2'>In addition to my technical skills, I also have project management and business consultancy skills, which help me effectively plan, execute, and deliver successful projects. I can handle both the technical and strategic aspects of projects, making sure they are completed efficiently and effectively.
+            Let's work together to create innovative solutions that drive results in the IT industry! With my collaborative and easy-going approach, along with my technical expertise and project management/business consultancy skills, I'm excited to contribute to the success of any team or organization.</p>
 
             {/* Images */}
             <div className='grid grid-cols-2 sm:grid-cols-3 md:hidden lg:grid gap-4 px-4 lg:pl-4 mt-4'>
