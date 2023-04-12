@@ -9,24 +9,24 @@ function Stats() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
           <div className="grid grid-cols-2 gap-4 lg:gap-6 md:grid-cols-4 text-center" data-aos-id-stats>
+            {/* 3rd item */}
+            <div className="bg-white dark:bg-gray-800 py-8 px-1 shadow-2xl" data-aos="fade-down" data-aos-anchor="[data-aos-id-stats]" data-aos-delay="200">
+              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">30%</div>
+              <div className="text-gray-600 dark:text-gray-400">Processes integration</div>
+            </div>
             {/* 1st item */}
             <div className="bg-white dark:bg-gray-800 py-8 px-1 shadow-2xl" data-aos="fade-down" data-aos-anchor="[data-aos-id-stats]">
-              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">50%</div>
+              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">25%</div>
               <div className="text-gray-600 dark:text-gray-400">Coding</div>
             </div>
             {/* 2nd item */}
             <div className="bg-white dark:bg-gray-800 py-8 px-1 shadow-2xl" data-aos="fade-down" data-aos-anchor="[data-aos-id-stats]" data-aos-delay="100">
-              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">20%</div>
-              <div className="text-gray-600 dark:text-gray-400">Working out</div>
-            </div>
-            {/* 3rd item */}
-            <div className="bg-white dark:bg-gray-800 py-8 px-1 shadow-2xl" data-aos="fade-down" data-aos-anchor="[data-aos-id-stats]" data-aos-delay="200">
-              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">15%</div>
-              <div className="text-gray-600 dark:text-gray-400">Personal development</div>
+              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">25%</div>
+              <div className="text-gray-600 dark:text-gray-400">Admin</div>
             </div>
             {/* 4th item */}
             <div className="bg-white dark:bg-gray-800 py-8 px-1 shadow-2xl" data-aos="fade-down" data-aos-anchor="[data-aos-id-stats]" data-aos-delay="300">
-              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">15%</div>
+              <div className="font-red-hat-display text-3xl font-extrabold tracking-tighter mb-1">20%</div>
               <div className="text-gray-600 dark:text-gray-400">Social life</div>
             </div>
           </div>
