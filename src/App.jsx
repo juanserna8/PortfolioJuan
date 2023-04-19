@@ -21,6 +21,8 @@ Amplify.configure(awsExports);
 
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import Blog from './pages/Blog';
+import Article from './partials/Article';
 
 function App() {
 
@@ -46,6 +48,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path='/blog/articles/:id' element={<Article />} />
       </Routes>
     </>
   );
