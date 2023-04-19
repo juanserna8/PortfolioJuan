@@ -23,7 +23,6 @@ const Article = () => {
                 if (id) {
                     const entries = await client.getEntry(id);
                     setBlogPost(entries);
-                    console.log('id',id)
                 }
             } catch(err){
                 console.log(err)
@@ -33,7 +32,7 @@ const Article = () => {
         getEntryById()
     }, [id]);
 
-    console.log(blogPost);
+    // console.log(blogPost);
 
     useEffect(() => {
         const getAllEntries = async () => {
@@ -45,7 +44,7 @@ const Article = () => {
             }
         }
         getAllEntries();
-        console.log(otherPosts, 'hey.');
+        // console.log(otherPosts, 'hey.');
     }, [])
 
     if (!blogPost) {
@@ -87,6 +86,13 @@ const Article = () => {
                             )
                         })}
                     </div>
+
+                    <Link to='/blog' className="flex justify-center lg:hidden">
+                        <button className="flex gap-2 mt-8 btn text-white bg-teal-500 hover:bg-orange-700 dark:hover:bg-transparent dark:hover:border dark:hover:border-teal-500 dark:hover:text-teal-500 shrink-0 transition duration-500 dark:duration-800">
+                            <svg className="h-4 w-4 text-white"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="5" y1="12" x2="11" y2="18" />  <line x1="5" y1="12" x2="11" y2="6" /></svg>
+                            <p>Blog</p>
+                        </button>
+                    </Link>
 
                     {/* Related posts section */}
                     <div className="mx-auto mt-[5rem] hidden lg:inline">
