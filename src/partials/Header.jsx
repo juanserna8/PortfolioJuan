@@ -77,6 +77,9 @@ function Header() {
               <li>
                 <Link to="/projects" className="text-gray-600 hover:text-gray-900 dark:hover:text-gray-300 text-lg hover:scale-110 px-5 py-2 flex items-center transition duration-150 ease-in-out">Projects</Link>
               </li>
+              <li>
+               <Link to="/blog" className="text-gray-600 hover:text-gray-900 dark:hover:text-gray-300 text-lg hover:scale-110 px-5 py-2 flex items-center transition duration-150 ease-in-out">Blog</Link>
+              </li>
               
               <li className='ml-4'>
                 <a href="https://www.linkedin.com/in/jdserna/" target="_blank">
@@ -169,6 +172,9 @@ function Header() {
                     </li>
                     <li>
                       <Link to="/projects" className="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">Projects</Link>
+                    </li>
+                    <li>
+                      <Link to="/blog" className="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">Blog</Link>
                     </li>
                     
                     <li className="absolute bottom-4 ">
