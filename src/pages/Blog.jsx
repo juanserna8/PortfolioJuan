@@ -25,9 +25,13 @@ const Blog = () => {
             }
         }
         getAllEntries();
-        console.log(blogPosts, 'hey');
+        // console.log(blogPosts, 'hey');
     }, [])
     
+    if(!blogPosts) {
+        return <div>Loading...</div>
+    }
+
     return ( 
         <motion.div
             initial={{ opacity: 0 }}
@@ -44,7 +48,13 @@ const Blog = () => {
                     <div className='mt-8 grid md:grid-cols-2 gap-8'>
                         {blogPosts?.items?.map(post => {
                             return(
-                                <div key={post.sys.id} className='pb-4 bg-gray-100 dark:bg-gray-800 rounded shadow-md'>
+                                <motion.div 
+                                    initial={{ x: -250 }}
+                                    animate={{ x: 0 }}
+                                    transition={{ duration: 1 }}
+                                    key={post.sys.id} 
+                                    className='pb-4 bg-gray-100 dark:bg-gray-800 rounded shadow-md'
+                                >
                                     <img src={post.fields.postImage.fields.file.url} alt="Post's image description" className='' />
                                     <div className='mt-4 px-4'>
                                         <h2 className='text-xl text-gray-600 font-poppins font-bold dark:text-white'>{post.fields.title}</h2>
@@ -53,7 +63,7 @@ const Blog = () => {
                                             <button className='mt-4 btn text-white bg-teal-500 hover:bg-orange-700 dark:hover:bg-transparent dark:hover:border dark:hover:border-teal-500 dark:hover:text-teal-500 shrink-0 transition duration-500 dark:duration-800'>Read more</button>
                                         </Link>
                                     </div>
-                                </div>
+                                </motion.div>
                             )
                         })}
                     </div>
