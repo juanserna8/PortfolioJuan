@@ -11,8 +11,8 @@ const Article = () => {
     const [otherPosts, setOtherPosts] = useState();
 
     const client = createClient({
-        space: 'txxakfmt66tu',
-        accessToken: 'N2vz1Guft3xOIHWOvcAVzRjQEbUYwPNMlSajGhcT6iA'
+        space: import.meta.env.VITE_API_SPACE,
+        accessToken: import.meta.env.VITE_API_ACCESS_TOKEN
     })
 
     const { id } = useParams();
