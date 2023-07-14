@@ -1,9 +1,47 @@
 
 [
     {
+        "name": "Afre Cleaning Services",
+        "link": "https://www.afrecleaning.com.au/",
+        "id": 1,
+        "info": 
+            [
+                {
+                    "title": "Project Description",
+                    "image": "./images/afre-home.webp",
+                    "description": "This project incorporates modern web development practices, including the use of TypeScript for type safety and Vite.js for fast and efficient development. It also leverages Tailwind CSS for responsive and customizable styling. The application showcases the use of UI components, routing, API integrations, and other features to create an interactive and engaging user experience."
+                },
+                {
+                    "title": "Customized design",
+                    "image": "./images/afre-design.webp",
+                    "description": "The web application showcases a meticulously crafted design created by a skilled professional using Figma. The development process involved close collaboration and effective teamwork between the designer and developer to bring the project to life and meet the unique needs of the client."
+                },
+                {
+                    "title": "Blog managed with a CMS",
+                    "image": "./images/afre-blog.webp",
+                    "description": "The project involved the implementation of a dynamic blog section, empowering the client to have full control over content management. Leveraging Contentful, a robust and intuitive Content Management System, the client gains the ability to effortlessly create, edit, and remove articles to align with their marketing objectives."
+                },
+                {
+                    "title": "SEO optimization",
+                    "image": "./images/afre-seo.webp",
+                    "description": "The website is meticulously optimized for search engines, adhering to best practices in SEO and accessibility. By incorporating structured data that aligns with Google's standards, the website enhances its visibility in search results, enabling clients to find it more effectively and improving its overall positioning."
+                },
+                {
+                    "title": "Web analytics",
+                    "image": "./images/afre-analytics.webp",
+                    "description": "The website seamlessly integrates with Google Analytics, utilizing the latest GA4 procedures and standards. Through this integration, comprehensive data is collected, including page visits, user clicks, popular blog articles, and conversion tracking. These insights are tailored to meet the specific requirements and requests of the client, enabling informed decision-making and effective analysis of user behavior."
+                },
+                {
+                    "title": "Restful API for quotes processing",
+                    "image": "./images/afre-email.webp",
+                    "description": "Implementation of a powerful REST API to handle and process quote forms submitted by users on the website. When a form is submitted, customers receive automated responses with beautifully designed emails tailored to their needs. This streamlined process ensures effective communication and delivers a personalized experience to customers."
+                }
+            ]
+    },
+    {
         "name": "The Ever Cake Website",
         "link": "https://dev.db61t1u90mry8.amplifyapp.com/",
-        "id": 1,
+        "id": 2,
         "info": 
             [
                 {
