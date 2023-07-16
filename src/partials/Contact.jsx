@@ -73,7 +73,7 @@ const Contact = () => {
         <section className="border-t border-transparent dark:border-gray-800">
             <div className="py-12 md:py-20 mx-auto px-4 sm:px-6">
                 <div className="font-poppins max-w-3xl mx-auto">
-                    <h1 className="h1 lg:text-3xl mb-4">Get in touch</h1>
+                    <h2 className="h1 lg:text-3xl mb-4">Get in touch</h2>
 
                     <div className="grid grid-cols-12 mt-6 gap-2">
 
@@ -85,9 +85,9 @@ const Contact = () => {
                             }}
                             className="col-span-5 cursor-pointer relative"
                         >
-                            <img src={Click} alt="cursor image" className='absolute -mt-16 md:-mt-[4rem] ml-4 md:ml-[3rem] lg:hidden md:scale-100 animate-beat'/>
-                            <img src={Clicklg} alt="cursor image" className='absolute hidden lg:flex -mt-[8rem] -ml-[9rem] animate-beat' />
-                            <img src={Select} alt="Juan's photo" className=''/>
+                            <img src={Click} title='cursor image' alt="cursor image" loading='lazy' className='absolute -mt-16 md:-mt-[4rem] ml-4 md:ml-[3rem] lg:hidden md:scale-100 animate-beat'/>
+                            <img src={Clicklg} title='cursor image' alt="cursor image" loading='lazy' className='absolute hidden lg:flex -mt-[8rem] -ml-[9rem] animate-beat' />
+                            <img src={Select} title='Juan photo' alt="Juan's photo" loading='lazy' className=''/>
                         </motion.div>
 
                         {/* Contact details container */}
