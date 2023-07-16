@@ -19,7 +19,8 @@
     "react-router-dom": "^6.10.0",
     "react-toastify": "^9.1.1",
     "react-transition-group": "^4.4.1",
-    "swiper": "^6.8.4"
+    "swiper": "^6.8.4",
+    "vanilla-tilt": "^1.8.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",

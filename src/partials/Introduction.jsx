@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import VanillaTilt from 'vanilla-tilt';
+import { motion } from 'framer-motion';
 
 import IphoneMockup from '../images/iphone-mockup.png';
 // import JuanPhone from "../images/Juan-phone.svg"
@@ -15,6 +17,24 @@ function Introduction() {
     setLoaded(true);
   }
 
+  const tiltRef = useRef(null);
+
+  const options = {
+    scale: 1.1,
+    speed: 2000,
+    max: 30
+  };
+
+  useEffect(() => {
+    VanillaTilt.init(tiltRef.current, options);
+  }, [options]);
+
+  const sentences = [
+    {id: 1, text: "Based in Hobart, Tasmania."},
+    {id: 2, text: "Front-end development, Business Consultancy and Digital Transformation."},
+    {id: 3, text: "Technology and Marketing/Administration Liaison for Optimal Results."}
+  ]
+
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -27,37 +47,33 @@ function Introduction() {
             <div className="md:col-span-6 lg:col-span-7 mb-8 md:mb-0 text-center md:text-left">
               <h1 className="h1 lg:text-6xl mb-4 font-open" data-aos="fade-down">Hey there, I'm Juan Serna</h1>
               <p className="text-xl text-gray-600 font-poppins dark:text-white" data-aos="fade-down" data-aos-delay="150">Front-end Developer and Project Management Professional</p>
-              <a className="mt-8 btn text-white text-xl bg-teal-500 hover:bg-orange-700 dark:hover:bg-transparent dark:hover:border dark:hover:border-teal-500 dark:hover:text-teal-500 shrink-0 transition duration-500 dark:duration-800" href={Resume} download>
+              <a className="mt-8 btn text-xl btn-general" href={Resume} download>
                 Resume
                 <svg className="h-6 w-6 text-white ml-4"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                 </svg>
               </a>
             
-              <ul className="max-w-sm sm:max-w-md mx-auto md:max-w-none text-gray-600 dark:text-gray-400 mt-8 -mb-2 font-poppins" data-aos="fade-down" data-aos-delay="450">
-                <li className="flex items-center mb-2">
-                  <svg className="w-3 h-3 fill-current text-teal-400 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                  </svg>
-                  <span>Based in Hobart, Tasmania.</span>
-                </li>
-                <li className="flex items-center mb-2 text-left">
-                  <svg className="w-3 h-3 fill-current text-teal-400 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                  </svg>
-                  <span>Front-end development, Business Consultancy and Digital Transformation.</span>
-                </li>
-                <li className="flex items-center mb-2 text-left">
-                  <svg className="w-3 h-3 fill-current text-teal-400 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                  </svg>
-                  <span>Technology and Marketing/Administration Liaison for Optimal Results.</span>
-                </li>
-              </ul>
+              <div className='max-w-sm sm:max-w-md mx-auto md:max-w-none text-left text-gray-600 dark:text-gray-400 mt-8 -mb-2 font-poppins'>
+                {sentences.map((sentence, i) => (
+                  <motion.div
+                    key={sentence.id}
+                    className='flex items-center mb-2'
+                    initial={{ opacity: 0, translateX: -50, translateY: -50}}
+                    animate={{ opacity: 1, translateX: 0, translateY: 0}}
+                    transition={{ duration: 0.3, delay: i * 1}}
+                  >
+                    <svg className="w-3 h-3 fill-current text-teal-400 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                    </svg>
+                    <span>{sentence.text}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
             {/* Mobile mockup */}
-            <div className="md:col-span-5 lg:col-span-5 text-center md:text-right" data-aos="fade-up" data-aos-delay="450">
+            <div ref={tiltRef} className="md:col-span-5 lg:col-span-5 text-center md:text-right" data-aos="fade-up" data-aos-delay="450">
               <div className="inline-flex relative justify-center items-center">
                 {/* Glow illustration */}
                 <svg className="absolute mr-12 mt-32 pointer-events-none -z-1 dark:opacity-40" aria-hidden="true" width="678" height="634" viewBox="0 0 678 634" fill="none" xmlns="http://www.w3.org/2000/svg">

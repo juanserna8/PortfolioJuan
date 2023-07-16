@@ -60,7 +60,7 @@ const Blog = () => {
                                         <h2 className='text-xl text-gray-600 font-poppins font-bold dark:text-white'>{post.fields.title}</h2>
                                         <p className='text-gray-600 dark:text-gray-400 mt-4 text-justify'>{post.fields.description.content[0].content[0].value.substring(0,150)}...</p>
                                         <Link to={`/blog/articles/${post.sys.id}`}>
-                                            <button className='mt-4 btn text-white bg-teal-500 hover:bg-orange-700 dark:hover:bg-transparent dark:hover:border dark:hover:border-teal-500 dark:hover:text-teal-500 shrink-0 transition duration-500 dark:duration-800'>Read more</button>
+                                            <button className='mt-4 btn btn-general'>Read more</button>
                                         </Link>
                                     </div>
                                 </motion.div>
