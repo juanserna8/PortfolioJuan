@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 
 const SkillSet = () => {
     return ( 
-        <section className="border-t border-transparent dark:border-gray-800">
+    <section className="border-t border-transparent dark:border-gray-800">
       <div className="py-12 md:py-20 mx-auto px-4 sm:px-6">
         <div className='font-poppins max-w-3xl mx-auto'>
-          <h1 className='h1 lg:text-3xl mb-4'>Skillset</h1>
+          <h2 className='h1 lg:text-3xl mb-4'>Skillset</h2>
           <div className='grid grid-cols-6 gap-6 lg:gap-12 mt-8'>
             <div className='col-span-3 md:col-span-2 mx-auto'>
               <svg className="h-12 w-12 dark:text-white mx-auto animate-pulse"  fill="none" viewBox="0 0 24 24" stroke="currentColor">

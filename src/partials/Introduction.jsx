@@ -78,9 +78,9 @@ function Introduction() {
                 {!loaded && (
                   <img src={LoadImage} alt="loading image" className='absolute animate-spin w-[20rem]' />
                 )}
-                <img className="absolute" src={JuanPhone} width="290" height="624" style={{ maxWidth: '84.33%', display: loaded ? 'block' : 'none' }} alt="Features illustration" onLoad={handleImageLoad} />
+                <img className="absolute" src={JuanPhone} loading='eager' width="290" height="624" style={{ maxWidth: '84.33%', display: loaded ? 'block' : 'none' }} title='Developer picture' alt="Features illustration" onLoad={handleImageLoad} />
                 {/* iPhone mockup */}
-                <img className="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src={IphoneMockup} width="344" height="674" alt="iPhone mockup" aria-hidden="true" />
+                <img className="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src={IphoneMockup} width="344" height="674" title='iPhone mockup' alt="iPhone mockup" aria-hidden="true" loading='eager' />
               </div>
 
             </div>

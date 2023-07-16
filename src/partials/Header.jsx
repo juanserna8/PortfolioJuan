@@ -62,7 +62,7 @@ function Header() {
           <div className="shrink-0">
             {/* Logo */}
             <Link to="/" className="block" aria-label="Cruip">
-              <img src={JuanLogo} alt="logo" className='w-[16rem]' />
+              <img src={JuanLogo} loading='eager' title='logo' alt="logo" className='w-[16rem]' />
             </Link>
           </div>
 
@@ -163,7 +163,7 @@ function Header() {
               <nav id="mobile-nav" ref={mobileNav} className="fixed top-0 h-screen z-20 left-0 w-full max-w-sm -ml-16 overflow-scroll bg-white dark:bg-gray-900 shadow-lg no-scrollbar">
                 <div className="py-6 pr-4 pl-20">                  
                   {/* Logo */}
-                  <img src={JsLogo} alt="Js logo abbreviated" className='w-[2.5rem]' />
+                  <img src={JsLogo} loading='eager' title='logo abbreviated' alt="Js logo abbreviated" className='w-[2.5rem]' />
                   {/* Links */}
                   <ul className='mt-8 border-t h-screen'>
                     
