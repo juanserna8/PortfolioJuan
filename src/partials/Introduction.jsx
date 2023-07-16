@@ -20,7 +20,7 @@ function Introduction() {
   const tiltRef = useRef(null);
 
   const options = {
-    scale: 1.1,
+    scale: 1,
     speed: 2000,
     max: 30
   };
