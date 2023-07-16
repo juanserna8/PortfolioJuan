@@ -14,6 +14,9 @@ const SkillSet = () => {
               <p className='text-2xl text-gray-600 text-center font-poppins dark:text-white mt-2'>Coding</p>
               <ul>
                 <li>
+                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>Javascript</p>
+                </li>
+                <li>
                   <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>React JS</p>
                 </li>
                 <li>
@@ -27,6 +30,9 @@ const SkillSet = () => {
                 </li>
                 <li>
                   <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>MySQL</p>
+                </li>
+                <li>
+                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>CMS integration</p>
                 </li>
               </ul>
             </div>
@@ -64,7 +70,19 @@ const SkillSet = () => {
                   <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>Vite</p>
                 </li>
                 <li>
-                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>Stripe integration</p>
+                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>Figma</p>
+                </li>
+                <li>
+                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>Payment gateways integration</p>
+                </li>
+                <li>
+                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>Google Analytics</p>
+                </li>
+                <li>
+                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>SEO optimization</p>
+                </li>
+                <li>
+                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>Google Search Console</p>
                 </li>
               </ul>
             </div>
@@ -73,6 +91,9 @@ const SkillSet = () => {
               <svg className="h-12 w-12 dark:text-white mx-auto animate-pulse"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M7 18a4.6 4.4 0 0 1 0 -9h0a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1" />  <polyline points="9 15 12 12 15 15" />  <line x1="12" y1="12" x2="12" y2="21" /></svg>
               <p className='text-2xl text-gray-600 text-center font-poppins dark:text-white mt-2'>Cloud</p>
               <ul>
+                <li>
+                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>REST APIs</p>
+                </li>
                 <li>
                   <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>AWS Amplify</p>
                 </li>
