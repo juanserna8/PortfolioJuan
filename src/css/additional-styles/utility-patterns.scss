@@ -39,6 +39,10 @@
     @apply px-4 py-2;
 }
 
+.btn-general {
+    @apply text-[white] bg-gradient-to-b from-[#3ABAB4] to-[gray] border-0 hover:from-[gray] hover:to-[#3ABAB4] dark:hover:bg-none dark:hover:border dark:hover:border-teal-500 shrink-0 transition duration-200
+}
+
 // Forms
 .form-input,
 .form-textarea,

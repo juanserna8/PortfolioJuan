@@ -137,7 +137,7 @@ const Contact = () => {
                                                 </div>
                                             )}
                                             <input type="text" onChange={handleChange} name="message" placeholder='Message' className='w-[18.5rem] bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
-                                            <button className='mt-4 px-2 h-10 text-white rounded text-sm text-center w-full bg-teal-500 hover:bg-orange-700 dark:hover:bg-transparent dark:hover:border dark:hover:border-teal-500 dark:hover:text-teal-500 shrink-0 transition duration-500 dark:duration-1000'>
+                                            <button className='mt-4 px-2 h-10 rounded text-sm text-center w-full btn-general'>
                                                 <span>Send message</span>
                                             </button>
                                         </div>
@@ -196,7 +196,7 @@ const Contact = () => {
                                 )}
                                 <input type="text" onChange={handleChange} name="message" placeholder='Message' className='w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b-1 p-0 mb-4 text-gray-600 dark:text-gray-400 text-lg' required />
                                 <div className='w-full flex justify-center'>
-                                    <button className='mt-4 btn text-white text-lg bg-teal-500 hover:bg-orange-700 shrink-0'>
+                                    <button className='mt-4 btn text-lg btn-general'>
                                         <span>Send message</span>
                                     </button>
                                 </div>
@@ -211,7 +211,7 @@ const Contact = () => {
                                 <p>Thanks for reaching out! I will be in touch shortly.</p>
                                 <p>Meanwhile, visit my most recent projects:</p>
                                 <Link to="/projects" className='mt-4 mx-auto'>
-                                    <button className='btn py-2 px-4 text-white bg-teal-500 hover:bg-orange-700'>
+                                    <button className='btn py-2 px-4 btn-general'>
                                         Projects
                                     </button>
                                 </Link>
