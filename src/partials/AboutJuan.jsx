@@ -149,7 +149,7 @@ function AboutJuan() {
                 className='pt-2'
                 initial={{ opacity: 0 }}
                 animate={secondPControls}
-                transition={{ duration: 1}}
+                transition={{ duration: 1, delay: 1}}
               >
                 As a web developer with expertise in React JS, AWS, and project management/business consultancy skills, I'm passionate about building dynamic and responsive IT-related projects. I enjoy creating elegant solutions to complex IT challenges using React JS and AWS serverless technologies. I've also gained experience in deploying applications on the cloud and integrating various AWS services to make them more scalable, reliable, and secure.
               </motion.p>
@@ -159,7 +159,7 @@ function AboutJuan() {
                 className='pt-2'
                 initial={{ opacity: 0 }}
                 animate={thirdPControls}
-                transition={{ duration: 1}}
+                transition={{ duration: 1, delay: 1}}
               >
                 In addition to my technical skills, I also have project management and business consultancy skills, which help me effectively plan, execute, and deliver successful projects. I can handle both the technical and strategic aspects of projects, making sure they are completed efficiently and effectively.
                 Let's work together to create innovative solutions that drive results in the IT industry! With my collaborative and easy-going approach, along with my technical expertise and project management/business consultancy skills, I'm excited to contribute to the success of any team or organization.
