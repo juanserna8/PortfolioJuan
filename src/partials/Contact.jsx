@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,6 +10,7 @@ import { API } from 'aws-amplify';
 import Select from '../images/select.webp';
 import Click from '../images/click.svg';
 import Clicklg from '../images/clicklg.svg';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
     const [request, setRequest] = useState({
@@ -67,7 +68,24 @@ const Contact = () => {
         
     }
 
-    const [rotate, setRotate] = useState(false)
+    const [rotate, setRotate] = useState(false);
+
+    // Animate the image for first rendering:
+    const imageControls = useAnimation();
+    const { ref: ImageRef, inView: isImageInView } = useInView({
+    triggerOnce: true, // Only trigger once when it becomes visible
+    threshold: 0.2 // Adjust this threshold as needed
+    });
+
+    useEffect(() => {
+        if (isImageInView) {
+            // If the last div is in view, start its animation
+            imageControls.start({
+                opacity: 1,
+                rotate: 0
+            });
+        }
+    }, [isImageInView, imageControls]);
     
     return ( 
         <section className="border-t border-transparent dark:border-gray-800">
@@ -75,7 +93,7 @@ const Contact = () => {
                 <div className="font-poppins max-w-3xl mx-auto">
                     <h2 className="h1 lg:text-3xl mb-4">Get in touch</h2>
 
-                    <div className="grid grid-cols-12 mt-6 gap-2">
+                    <div ref={ImageRef} className="grid grid-cols-12 mt-6 gap-2">
 
                         <motion.div 
                             animate={{ rotate: rotate ? 360 : 0 }}
@@ -87,7 +105,12 @@ const Contact = () => {
                         >
                             <img src={Click} title='cursor image' alt="cursor image" loading='lazy' className='absolute -mt-16 md:-mt-[4rem] ml-4 md:ml-[3rem] lg:hidden md:scale-100 animate-beat'/>
                             <img src={Clicklg} title='cursor image' alt="cursor image" loading='lazy' className='absolute hidden lg:flex -mt-[8rem] -ml-[9rem] animate-beat' />
-                            <img src={Select} title='Juan photo' alt="Juan's photo" loading='lazy' className=''/>
+                            <motion.img 
+                                initial={{ opacity: 0, rotate: 180}}
+                                animate={imageControls}
+                                transition={{ duration: 1.5}}
+                                src={Select} title='Juan photo' alt="Juan's photo" loading='lazy' className=''
+                            />
                         </motion.div>
 
                         {/* Contact details container */}

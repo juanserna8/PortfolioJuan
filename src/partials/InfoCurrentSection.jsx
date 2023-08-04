@@ -8,6 +8,7 @@ const InfoCurrentSection = (project) => {
     const handleNext = () => {
         setCurrentSection(currentSection + 1);
     }
+    
     return (
         <motion.div 
             initial={{ x: -250 }}
