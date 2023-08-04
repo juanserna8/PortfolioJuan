@@ -1,9 +1,35 @@
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 
 const SkillSet = () => {
-    return ( 
-    <section className="border-t border-transparent dark:border-gray-800">
-      <div className="py-12 md:py-20 mx-auto px-4 sm:px-6">
+  
+  const parentControls = useAnimation();
+  // Hook to track if the last div (with id="paragraph") is in the viewport
+  const { ref: ParentRef, inView: isParentInView } = useInView({
+      triggerOnce: true, // Only trigger once when it becomes visible
+      threshold: 0.2 // Adjust this threshold as needed
+  });
+
+  useEffect(() => {
+      if (isParentInView) {
+          // If the last div is in view, start its animation
+          parentControls.start({
+              opacity: 1
+          });
+      }
+  }, [isParentInView, parentControls]);
+
+  
+  return ( 
+    <section ref={ParentRef} className="border-t border-transparent dark:border-gray-800">
+      <motion.div 
+        className="py-12 md:py-20 mx-auto px-4 sm:px-6"
+        initial={{ opacity: 0}}
+        animate={parentControls}
+        transition={{ duration: 0.8}}
+      >
         <div className='font-poppins max-w-3xl mx-auto'>
           <h2 className='h1 lg:text-3xl mb-4'>Skillset</h2>
           <div className='grid grid-cols-6 gap-6 lg:gap-12 mt-8'>
@@ -159,7 +185,7 @@ const SkillSet = () => {
             </button>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </section>
      );
 }
