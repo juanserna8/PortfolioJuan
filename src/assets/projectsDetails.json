@@ -1,6 +1,34 @@
 
 [
     {
+        "name": "Bennett Cleaning Services",
+        "link": "https://www.bennettcleaningservices.com.au/",
+        "id": 0,
+        "info": 
+            [
+                {
+                    "title": "Project Description",
+                    "image": "./images/bennett-home.webp",
+                    "description": "This project represents the online presence of one of Tasmania's foremost and pioneering cleaning companies. Developed using cutting-edge technologies, including React and Tailwind CSS, the website showcases a blend of innovation and functionality."
+                },
+                {
+                    "title": "Customized animations",
+                    "image": "./images/bennett-animations.webp",
+                    "description": " Notably, animations created with Framer Motion and React-Tilt contribute to an engaging user experience, while React's capabilities, along with custom UI components, ensure seamless navigation. Through this platform, the company's leadership and significance within the cleaning industry are effectively communicated, reflecting a commitment to excellence and user satisfaction."
+                },
+                {
+                    "title": "Services showcase",
+                    "image": "./images/bennett-carousel.webp",
+                    "description": "Compilation aimed at highlighting pertinent tasks. By strategically integrating relevant keywords, we optimize the site's positioning on Google. To further engage users, a meticulously crafted image carousel takes center stage. This carousel showcases a curated selection of images portraying our professional cleaning services in action. These images not only captivate users but also provide a visual testament to the quality of our cleaning expertise."
+                },
+                {
+                    "title": "Blog, Tips and News section",
+                    "image": "./images/bennett-blog.webp",
+                    "description": "Our dynamic Blog section utilizes React-dom's variable routing to offer visitors a seamless experience as they explore a diverse range of articles. Leveraging real-time database integration, the selected article's content is fetched and presented in a component format, ensuring up-to-date and relevant information. This innovative approach creates a user-centric space for cleaning tips, industry insights, and guides, providing an engaging and informative platform for our audience."
+                }
+            ]
+    },
+    {
         "name": "Afre Cleaning Services",
         "link": "https://www.afrecleaning.com.au/",
         "id": 1,
@@ -79,7 +107,7 @@
     {
         "name": "2 Hands Services",
         "link": "https://2handsservices.com/",
-        "id": 2,
+        "id": 3,
         "info": 
             [
                 {
@@ -107,7 +135,7 @@
     {
         "name": "A&A Services",
         "link": "https://www.anacleaningandlaundry.com/",
-        "id": 2,
+        "id": 4,
         "info": 
             [
                 {
