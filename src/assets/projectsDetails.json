@@ -105,34 +105,6 @@
             ]
     },
     {
-        "name": "2 Hands Services",
-        "link": "https://2handsservices.com/",
-        "id": 3,
-        "info": 
-            [
-                {
-                    "title": "Project Description",
-                    "image": "./images/two-hands-home1.webp",
-                    "description": "Typescript-based React application using Vite. Easy to navigate and provides all the necessary information about the company."
-                },
-                {
-                    "title": "Company's values and services",
-                    "image": "./images/values1.webp",
-                    "description": "Display of the company's mission, values and services in a clear and professional way to engage leads and customers."
-                },
-                {
-                    "title": "Quotes processing",
-                    "image": "./images/form.webp",
-                    "description": "All questions, enquiries, quotes and communications made from the website are processed. Captcha integration and small math test to receive only genuine enquiries. A notification via Amazon SES to company's email is sent every time someone submits a form."
-                },
-                {
-                    "title": "Workmail",
-                    "image": "./images/workmail.webp",
-                    "description": "Creation of Amazon workmail (cloud-based email and calendaring service) account for business operators. Assisstance in the set up of the accounts and introduction of usage and benefits."
-                }
-            ]
-    },
-    {
         "name": "A&A Services",
         "link": "https://www.anacleaningandlaundry.com/",
         "id": 4,
@@ -164,6 +136,33 @@
                     "description": "Creation and set up of Google My Business Account, which allows the business to manage its online presence on Google Search and Google Maps, receive reviews from clients, and make it easier for customers to find the company on the web."
                 }
             ]
+    },
+    {
+        "name": "2 Hands Services",
+        "link": "https://2handsservices.com/",
+        "id": 3,
+        "info": 
+            [
+                {
+                    "title": "Project Description",
+                    "image": "./images/two-hands-home1.webp",
+                    "description": "Typescript-based React application using Vite. Easy to navigate and provides all the necessary information about the company."
+                },
+                {
+                    "title": "Company's values and services",
+                    "image": "./images/values1.webp",
+                    "description": "Display of the company's mission, values and services in a clear and professional way to engage leads and customers."
+                },
+                {
+                    "title": "Quotes processing",
+                    "image": "./images/form.webp",
+                    "description": "All questions, enquiries, quotes and communications made from the website are processed. Captcha integration and small math test to receive only genuine enquiries. A notification via Amazon SES to company's email is sent every time someone submits a form."
+                },
+                {
+                    "title": "Workmail",
+                    "image": "./images/workmail.webp",
+                    "description": "Creation of Amazon workmail (cloud-based email and calendaring service) account for business operators. Assisstance in the set up of the accounts and introduction of usage and benefits."
+                }
+            ]
     }
-
 ]
