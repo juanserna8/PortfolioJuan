@@ -2,7 +2,6 @@ import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import { Collapse, Typography } from 'antd';
 
 const SkillSet = () => {
   
