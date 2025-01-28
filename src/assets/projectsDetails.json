@@ -1,9 +1,60 @@
 
 [
     {
+        "name": "Blueline Cleaning",
+        "link": "https://www.bluelinecleaning.com.au/",
+        "id": 0,
+        "info": 
+            [
+                {
+                    "title": "Project Description",
+                    "image": "./images/blueline-home.jpg",
+                    "description": "Built a dynamic and mobile-friendly website for Blueline Cleaning using Next.js and Sanity, enabling seamless content management. Integrated scroll-triggered animations for an engaging user experience, where content changes dynamically as users scroll."
+                },
+                {
+                    "title": "News section",
+                    "image": "./images/blueline-blog.jpg",
+                    "description": "Implemented a News section managed by Sanity.io, utilizing GraphQL to maintain scalability and performance of the web application while providing an intuitive and user-friendly CMS interface for content management."
+                },
+                {
+                    "title": "Serverless Architecture",
+                    "image": "./images/blueline-form.png",
+                    "description": "Built the application using serverless technologies, allowing the client to pay only for server usage on a monthly basis. Managed online forms, web hosting, and email services through AWS for efficient performance and scalability."
+                }
+            ]
+    },
+    {
+        "name": "Ausadvent Care",
+        "link": "https://www.ausadventcare.com.au/",
+        "id": 1,
+        "info": 
+            [
+                {
+                    "title": "Project Description",
+                    "image": "./images/ausadvent-home.jpg",
+                    "description": "Developed a responsive website for AusAdventCare using Next.js, Tailwind CSS, and Contentful for dynamic content management, hosted on AWS Amplify. The project highlights seamless integration of modern frameworks for scalability, performance, and an engaging user experience."
+                },
+                {
+                    "title": "Multiple paged",
+                    "image": "./images/ausadvent-pages.jpg",
+                    "description": "Implemented file-based and dynamic routing for multiple pages, incorporating relevant metadata and SEO optimization. Developed a well-structured, documented sitemap to enhance compatibility with Google crawlers and improve search engine visibility."
+                },
+                {
+                    "title": "Blog",
+                    "image": "./images/ausadvent-blog.jpg",
+                    "description": "Designed and integrated a blog using Contentful, enabling the client to easily create, update, and delete articles. Optimized for engagement and improved Google positioning, ensuring flexibility to adapt to evolving content and business needs."
+                },
+                {
+                    "title": "Google Positioning",
+                    "image": "./images/ausadvent-analytics.png",
+                    "description": "Achieved a significant increase in visitors following an SEO optimization campaign and blog enhancement. Focused on identifying relevant keywords and crafting tailored content to align with customer interests and improve search engine rankings."
+                }
+            ]
+    },
+    {
         "name": "Bennett Cleaning Services",
         "link": "https://www.bennettcleaningservices.com.au/",
-        "id": 0,
+        "id": 2,
         "info": 
             [
                 {
@@ -31,7 +82,7 @@
     {
         "name": "Afre Cleaning Services",
         "link": "https://www.afrecleaning.com.au/",
-        "id": 1,
+        "id": 3,
         "info": 
             [
                 {
@@ -69,7 +120,7 @@
     {
         "name": "The Ever Cake",
         "link": "https://dev.db61t1u90mry8.amplifyapp.com/",
-        "id": 2,
+        "id": 4,
         "info": 
             [
                 {
@@ -107,7 +158,7 @@
     {
         "name": "A&A Services",
         "link": "https://www.anacleaningandlaundry.com/",
-        "id": 4,
+        "id": 5,
         "info": 
             [
                 {
@@ -140,7 +191,7 @@
     {
         "name": "2 Hands Services",
         "link": "https://2handsservices.com/",
-        "id": 3,
+        "id": 6,
         "info": 
             [
                 {
