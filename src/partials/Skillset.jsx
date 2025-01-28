@@ -54,7 +54,7 @@ const SkillSet = () => {
                   <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>Typescript</p>
                 </li>
                 <li>
-                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>MySQL</p>
+                  <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>Next JS</p>
                 </li>
                 <li>
                   <p className='text-xl text-gray-600 dark:text-gray-400 text-center'>CMS integration</p>
