@@ -1,7 +1,7 @@
 
 [
     {
-        "name": "Blueline Cleaning",
+        "name": "Blueline",
         "link": "https://www.bluelinecleaning.com.au/",
         "id": 0,
         "info": 
@@ -20,6 +20,11 @@
                     "title": "Serverless Architecture",
                     "image": "./images/blueline-form.png",
                     "description": "Built the application using serverless technologies, allowing the client to pay only for server usage on a monthly basis. Managed online forms, web hosting, and email services through AWS for efficient performance and scalability."
+                },
+                {
+                    "title": "Web performance",
+                    "image": "./images/blueline-metrics.png",
+                    "description": "Optimized the application for outstanding performance, accessibility, best practices, and SEO, ensuring a fast, user-friendly experience and improved search engine visibility. These optimizations demonstrate a commitment to delivering a high-quality, scalable web solution."
                 }
             ]
     },
